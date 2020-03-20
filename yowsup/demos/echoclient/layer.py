@@ -29,7 +29,7 @@ class EchoLayer(YowInterfaceLayer):
             print("Echoing image %s to %s" % (messageProtocolEntity.url, messageProtocolEntity.getFrom(False)))
 
         elif messageProtocolEntity.media_type == "location":
-            print("Echoing location (%s, %s) to %s" % (messageProtocolEntity.getLatitude(), messageProtocolEntity.getLongitude(), messageProtocolEntity.getFrom(False)))
+            print("Echoing location (%s, %s) to %s" % (messageProtocolEntity.degrees_latitude, messageProtocolEntity.degrees_longitude, messageProtocolEntity.getFrom(False)))
 
         elif messageProtocolEntity.media_type == "contact":
-            print("Echoing contact (%s, %s) to %s" % (messageProtocolEntity.getName(), messageProtocolEntity.getCardData(), messageProtocolEntity.getFrom(False)))
+            print("Echoing contact (%s, %s) to %s" % (messageProtocolEntity.display_name, messageProtocolEntity.vcard, messageProtocolEntity.getFrom(False)))
