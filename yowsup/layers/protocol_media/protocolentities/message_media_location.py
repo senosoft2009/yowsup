@@ -13,7 +13,7 @@ class LocationMediaMessageProtocolEntity(MediaMessageProtocolEntity):
 
     @property
     def media_specific_attributes(self):
-        return self.message_attributes.contact
+        return self.message_attributes.location
 
     @property
     def degrees_latitude(self):
@@ -41,7 +41,7 @@ class LocationMediaMessageProtocolEntity(MediaMessageProtocolEntity):
 
     @property
     def address(self):
-        return self.proto.addrees
+        return self.media_specific_attributes.address
 
     @address.setter
     def address(self, value):
